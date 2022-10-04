@@ -88,3 +88,25 @@ describe('calculator', () => {
     });
   });
 });
+
+/* Tests for Capitalize */
+
+const capitalize = require ('./capitalize');
+describe('capitalize', () => {
+
+  it('capitalize check', () => {
+    expect(capitalize('string')).toBe('String');
+  });
+
+  it('capitalize check 2', () => {
+    expect(capitalize('example2')).toBe('Example2')
+  });
+
+  it('capitalize empty check', () => {
+    expect(() => capitalize('')).toThrow('Error: Empty String');
+  });
+
+  it('capitalize check', () => {
+    expect(() => capitalize(5)).toThrow('Error: Not a String');
+  });
+});
